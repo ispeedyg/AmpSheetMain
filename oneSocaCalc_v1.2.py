@@ -19,11 +19,13 @@ import xlwings as xw
 # TODO THE SAME AS THE FIRST SOCAPEX(THIS ONE). BRAIN IS CRAMPING ON HOW TO CREATE OOP HAPPEN
 # TODO THIS VERSION IS A PYCHARM VERSION. 
 
-path = "/Users/speedy/Documents/GitProjects/AmpCalculate/AmpExcelPython/RigBalanceWorkSheet48way.xlsx"
+path = "/Users/speedy/Documents/GitProjects/AmpSheetRepository/AmpSheetMain/RigBalanceWorkSheet48way.xlsx"
 wb = openpyxl.load_workbook(path)
 sheet = wb['Racks']
-wk = xw.books.open(r"RigBalanceWorkSheet48way.xlsx")  # might not work in vsCode not sure what the r is
-sheet2 = wk.sheets('Racks')
+wk = xw.books.open(r"/Users/speedy/Documents/GitProjects/AmpSheetRepository/AmpSheetMain/RigBalanceWorkSheet48way.xlsx")  # Back to this, Might have to try absolute directory
+# well absolute will open but have the error of 2 workbooks. How the hell did I get this to work before this is just copy and pasted.add()
+sheet2 = wk.sheets('Racks')  #changed from wk not sure yet if it works running again
+
 # speedy = "speedyG"
 # sheet2.range("A16").value = speedy # it allows variables which is good for later
 
