@@ -9,6 +9,8 @@ import xlwings as xw
 # This is a copy of the first Soca in Tweaking because it goes past 5 channels
 # and this is showing up as Modified but why am i not seeing it on Github. 
 
+# Ok looks like i have a starting spot to play with as of 9.22.23
+
 
 
 
