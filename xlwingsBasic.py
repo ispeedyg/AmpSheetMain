@@ -13,20 +13,21 @@ ws1 = wbTest.sheets(0)
 # print(wbTest.range('A1).options(numbers=int).value) PRINTS AN INTEGER USE FOR CHANNEL NUMBERS
 racksSheet = pd.read_excel(path, 'Racks')
 wattsSheet = pd.read_excel(path, 'Watts').to_dict()
-actualWatts = []
-rowWatts = 0 # to factor that rows total watts
-MAXCHANS = 25 # make it one more so less than is easier plus have to slice 5 off the front
+startingPositions = [(3,9,1), (16,22,1), (28,34,1), (41,47,1), (54,60,1), (67,73,1), (80,86,1), (93,99,1)]
 cCounter = 0
+channelNumsSliced = []
+allChannels = []
+# for position in startingPositions:
+    
 
 for counter in range(3, 9, 1): # should be the rows that i am getting the channels from 
     cCounter += 1
     channelNums = []
-    channelNumsSliced = []
-    
-    
+       
     for k, v in racksSheet.items():
         
         channelNums.append(racksSheet[k][cCounter])
-        channelNumsSliced = channelNums[5:]
-        
-    print(channelNumsSliced) # this is where the slice happens and is working 
+        # channelNumsSliced = channelNums[5:]
+    allChannels.append(channelNums[5:]) # creating a large list for the entire sheet to work from later
+    print(channelNums[5:]) # this is where the slice happens and is working 
+print(f"allchannels = {allChannels}")
