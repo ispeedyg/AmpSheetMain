@@ -1,3 +1,9 @@
+import os
+
+def clearScreen():
+    os.system('clear')
+clearScreen()
+
 import xlwings as xw 
 import pandas as pd  
 path = "/Users/speedy/Documents/GitProjects/AmpSheetRepository/AmpSheetMain/test2.xlsx" 
@@ -15,9 +21,12 @@ cCounter = 0
 for counter in range(3, 9, 1): # should be the rows that i am getting the channels from 
     cCounter += 1
     channelNums = []
+    channelNumsSliced = []
     
     
     for k, v in racksSheet.items():
         
         channelNums.append(racksSheet[k][cCounter])
-    print(channelNums[5:]) # this is where the slice happens and is working 
+        channelNumsSliced = channelNums[5:]
+        
+    print(channelNumsSliced) # this is where the slice happens and is working 
