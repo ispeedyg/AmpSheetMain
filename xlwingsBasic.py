@@ -15,26 +15,26 @@ ws1 = wbTest.sheets(0)
 racksSheet = pd.read_excel(path, 'Racks')
 
 wattsSheet = pd.read_excel(path, 'Watts').to_dict()
-channelNums = []
-startingPositions = [(3,9,1), (16,22,1), (28,34,1), (41,47,1), (54,60,1), (67,73,1), (80,86,1), (93,99,1)]
-channelNums4 = []
+
+startingPositions = [1,2,3,4,5,6,14,15,16,17,18,19,26,27,28,29,30,31,39,40,41,42,43,44,52, 53, 54, 55, 56, 57,65,66,67,68,69,70,78,79,80,81,82,83,91,92,93,94,95,96]
+
 cCounter = 0
 allChannels = []
-posX = startingPositions[1][0]
-print(posX)
+for position in startingPositions:
+    channelNums = []
+    
+    row1 = racksSheet.loc[position]
 
-for k, v in racksSheet.items():
-    pass
-row1 = racksSheet.loc[4]
-row2 = data.iloc[3]
-row3 = racksSheet.iloc[4]
-print(row1)
-print('***************************************************')
-for k, v in row3.items():
-    print(v)
-    allChannels.append(v)
+    print('******************** Starting a new ************************')
     print('***************************************************')
-print(f"all channels : {allChannels[5:]}")
+    for k, v in row1.items():
+        print(v)
+        print('---------------------------------------------')
+        channelNums.append(v)
+        print(f"channelNums: {channelNums}")
+    allChannels.append(channelNums[5:])
+    print('***************************************************')
+    print(f"all channels : {allChannels}")
 
     
 
