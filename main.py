@@ -8,6 +8,8 @@ channels = Channels()
 allChans = channels.allChannels
 pathTo = channels.path
 channels.getChans(allChans)
+daWatts = watts.temp
 
-watts.whatsWatts(path=pathTo, list=allChans)
+watts.whatsWatts(path=pathTo, list=allChans, daWatts=daWatts)
+print(daWatts)
 
