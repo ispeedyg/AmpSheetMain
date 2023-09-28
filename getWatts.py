@@ -18,7 +18,8 @@ class Watts:
                 chanlo = data['ChanLow'][x]
                 chanHi = data['ChanHigh'][x]
         
-                for b in range(8):
+                for b in range(len(df.loc[a])):
+                    # print(len(df.loc[a]))
                     if df.loc[a][b] in range(chanlo, chanHi):
                         # print(f"im in there: {df.loc[a][b]}")
                         self.watts = data['Wattage'][x]
