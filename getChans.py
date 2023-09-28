@@ -15,7 +15,7 @@ class Channels:
             row1 = self.racksSheet.loc[position] # Getting the row to append to AllChannels This will get all 48 circuits
 
             for k, v in row1.items():
-                
+               
                 self.channelNums.append(v)
                 
             self.allChannels.append(self.channelNums[5:]) # slices off the unneeded stuff leaves just the channels
