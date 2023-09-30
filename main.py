@@ -14,6 +14,6 @@ daWatts = watts.temp
 getTotalWatts = totalWatts.totalWattsPerLine
 
 watts.whatsWatts(path=pathTo, list=allChans, daWatts=daWatts)
-print(daWatts)
+
 
 totalWatts.getDaTotals(daWatts, totalWattsPerLine=getTotalWatts)

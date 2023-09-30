@@ -13,13 +13,14 @@ class Channels:
         for position in STARTING_POSITIONS:
             self.channelNums = []   # resets channel nums back to blank for next line. 
             row1 = self.racksSheet.loc[position] # Getting the row to append to AllChannels This will get all 48 circuits
-
+            rowLength = len(row1) # gives me the length of the row to calculate spare circuitsn later
+            print(f"The row length is : {rowLength - 5}\n") # -5 is the 5 slice away that are not channels
             for k, v in row1.items():
                
                 self.channelNums.append(v)
                 
             self.allChannels.append(self.channelNums[5:]) # slices off the unneeded stuff leaves just the channels
-        
+        print(self.allChannels)
         return self.allChannels # returns to main the channels of the sheet
     
     
