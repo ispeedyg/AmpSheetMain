@@ -22,7 +22,7 @@ class Channels:
                
                 self.channelNums.append(v)
                 
-            self.allChannels.append(self.channelNums[5:]) # slices off the unneeded stuff leaves just the channels
+            self.allChannels.append(self.channelNums[6:]) # slices off the unneeded stuff leaves just the channels
         # print(self.allChannels)
         return self.allChannels # returns to main the channels of the sheet
     
