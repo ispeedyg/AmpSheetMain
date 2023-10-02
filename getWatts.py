@@ -8,7 +8,7 @@ class Watts:
         self.temp = []
         
      
-    def whatsWatts(self, path, list, daWatts):
+    def whatsWatts(self, path, list):
         data = pd.read_excel(path, 'Watts').to_dict()
         df = pd.DataFrame(list)
         # print(df)
@@ -26,6 +26,6 @@ class Watts:
                         # print(self.watts)
                         self.temp.append(a)
                         self.temp.append(self.watts)
-                    
+        print(self.temp)   
         return(self.temp)
             
